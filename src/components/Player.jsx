@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function Player() {
+ const [enteredPlayerName, setEnteredplayerName] = useState('');
   return (
     <section id="player">
       <h2>Welcome unknown entity</h2>
