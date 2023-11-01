@@ -1,6 +1,12 @@
-import React from "react";
+
+
 
 export default function TimerChallange({ title, targetTime }) {
+
+  function handleStart(){
+    setTimeout(() => {}, 1000);
+  }
+
   return (
     <section className="challenge">
       <h2>{title}</h2>
@@ -8,7 +14,7 @@ export default function TimerChallange({ title, targetTime }) {
         {targetTime} second{targetTime > 1 ? "s" : ""}
       </p>
       <p>
-        <button>Start Challenge</button>
+        <button onClick={}>Start Challenge</button>
       </p>
       <p className="active">Time is running... /Timer inactive</p>
     </section>
