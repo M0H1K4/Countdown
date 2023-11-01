@@ -20,9 +20,13 @@ export default function TimerChallange({ title, targetTime }) {
         {targetTime} second{targetTime > 1 ? "s" : ""}
       </p>
       <p>
-        <button onClick={handleStart}>{timerStarted ? 'Stop' : 'Start'} Challenge</button>
+        <button onClick={handleStart}>
+          {timerStarted ? "Stop" : "Start"} Challenge
+        </button>
       </p>
-      <p className="active">Time is running... /Timer inactive</p>
+      <p className={timerStarted ? "active" : undefined}>
+        {timerStarted ? 'Time is running... ' : 'Timer inactive'}
+      </p>
     </section>
   );
 }
