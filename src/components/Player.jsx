@@ -6,7 +6,7 @@ export default function Player() {
   const [enteredPlayerName, setEnteredplayerName] = useState(null);
 
   function handleClick() {
-    setEnteredplayerName(playerName.current.value)
+    setEnteredplayerName(playerName.current.value);
     playerName.current.value = "";
   }
 
