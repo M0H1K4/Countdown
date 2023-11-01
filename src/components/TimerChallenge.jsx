@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
 
-export default function TimerChallange({title, targetTime}) {
+export default function TimerChallange({ title, targetTime }) {
   return (
-    <section className='challange'>
+    <section className="challenge">
       <h2>{title}</h2>
-      <p className="challange-time">
-        {targetTime} seconds
+      <p className="challenge-time">
+        {targetTime} seconds{targetTime > 1 ? "s" : ""}
       </p>
+      <p>
+        <button>Start Challenge</button>
+      </p>
+      <p className="active">Time is running... / Timer inactive</p>
     </section>
-  )
+  );
 }
