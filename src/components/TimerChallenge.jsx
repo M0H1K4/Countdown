@@ -6,15 +6,10 @@ import ResultModal from "./ResultModal";
 export default function TimerChallange({ title, targetTime }) {
   const timer = useRef();
   const dialog = useRef();
-
-  const [timerStarted, setTimerStarted] = useState(false);
-  const [timerExpired, setTimerExpired] = useState(false);
+  const [timeRemaining, setTimeRemaining] = useState(targetTime * 1000);
 
   function handleStart() {
-    timer.current = setTimeout(() => {
-      setTimerExpired(true);
-      dialog.current.open();
-    }, targetTime * 1000);
+    timer.current = setInterval(() => {}, 10);
 
     setTimerStarted(true);
   }
