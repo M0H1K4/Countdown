@@ -1,4 +1,5 @@
 import React from "react";
+import {forwardRef} from 'react'
 
 export default function ResultModal({ ref, result, targetTime }) {
   return (
